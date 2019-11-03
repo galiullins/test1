@@ -46,3 +46,48 @@ img {
 h2{
     text-align: center;
 }
+
+.color1 {
+    width: 100%;
+    height: 100px;
+    background-color:red;
+
+}
+
+.color2 {
+    width: 100%;
+    height: 100px;
+    background-color:blue;
+
+}
+
+.color3 {
+    width: 100%;
+    height: 100px;
+    background-color: green;
+
+}
+
+.color4 {
+    width: 100%;
+    height: 100px;
+    background-color: yellow;
+
+}
+
+.color5 {
+    width: 100%;
+    height: 100px;
+    background-color: orangered;
+
+}
+
+.color6 {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+
+}
+.container{
+    margin-top: 10px;
+}
