@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="slide">
+    <img name="slider" width="400" height="200">
+    </div>
+</body>
+<script>
+var i = 0; //Start point
+var images = [];
+var time = 3000;
+
+// Image List
+
+images[0]= 'football.jpg';
+images[1]= 'img1.jpg';
+images[2]= 'football.jpg';
+
+// Function to change the image
+
+function changeImg(){
+    document.slider.src = images[i];
+    if (i < images.length-1){
+        i++;
+    } else {
+        i = 0;
+    }
+
+    setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
+
+</script>
+</html>

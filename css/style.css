@@ -62,9 +62,6 @@ nav a:hover {
 text-align: center;
 }
 
-img {
-    width: 100%;
-}
 
 h2{
     text-align: center;
@@ -113,4 +110,9 @@ h2{
 }
 .container{
     margin-top: 10px;
+}
+
+.slide {
+    text-align: center;
+    margin-top: 50px;
 }
