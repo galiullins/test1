@@ -10,32 +10,21 @@
     <div class="slide">
     <img name="slider" width="400" height="200">
     </div>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="football.jpg" alt="" id="lastClone">
+            <img src="football.jpg" alt="">
+            <img src="football.jpg" alt="">
+            <img src="football.jpg" alt="">
+            <img src="football.jpg" alt="" id="firstClone">
+        </div>
+    </div>
+
+    <button id="prevBtn">Prev</button>
+    <button id="nxtBtn">Next</button>
+
+
 </body>
-<script>
-var i = 0; //Start point
-var images = [];
-var time = 3000;
-
-// Image List
-
-images[0]= 'football.jpg';
-images[1]= 'img1.jpg';
-images[2]= 'football.jpg';
-
-// Function to change the image
-
-function changeImg(){
-    document.slider.src = images[i];
-    if (i < images.length-1){
-        i++;
-    } else {
-        i = 0;
-    }
-
-    setTimeout("changeImg()", time);
-}
-
-window.onload = changeImg;
-
-</script>
+ <script src="script.js"></script>
 </html>
