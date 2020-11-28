@@ -1,4 +1,4 @@
-var i = 0; //Start point
+/* var i = 0; //Start point
 var images = [];
 var time = 3000;
 
@@ -22,7 +22,7 @@ function changeImg(){
 
 window.onload = changeImg;
 
-
+*/
 
 
 // Script For Second Slider
@@ -44,14 +44,29 @@ carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
 //Button Listeners 
 nextBtn.addEventListener('click', function() {
+    if (counter >= carouselImages.length -1 )return;
     carouselSlide.style.transition = 'transform 0.4s ease-in-out';
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
 });
 
 prvBtn.addEventListener('click', function() {
+    if (counter <= 0)return;
     carouselSlide.style.transition = 'transform 0.4s ease-in-out';
     counter--;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+});
+
+carouselSlide.addEventListener('transitioned', () => {
+    if (carouselImages[counter].id === 'lastClone'){
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - 2; 
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
+    if (carouselImages[counter].id === 'firstClone'){
+        carouselSlide.style.transition = 'none';
+        counter = carouselImages.length - counter; 
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    }
 });
 
