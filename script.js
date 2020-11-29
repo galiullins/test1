@@ -89,5 +89,24 @@ function slider(){
     }
 };
 
-document.querySelector('.infinity-slider').onclick = slider;
+slider();
 
+//document.querySelector('.infinity-slider').onclick = slider;
+
+document.querySelector('.back').onclick = function (){
+    if (current - 1 == -1 ) {
+        current = images.length - 1;
+    } else {
+        current--;
+    }
+    slider();
+};
+
+document.querySelector('.forward').onclick = function (){
+    if (current + 1 == images.length ) {
+        current = 0;
+    } else {
+        current++;
+    }
+    slider();
+};
