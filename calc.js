@@ -55,9 +55,15 @@ function devide(){
     num2 = document.getElementById('n2').value;
     num2 = parseInt(num2);
 
-    var result = num1 / num2;
-    
+    function result(){
+        var total = num1 / num2;
+        if (num2 == 0) {
+            return "Делить на ноль нельзя";
+        } else {
+            return total;
+        }
+    }
     //inner HTML
-    document.getElementById('result').innerHTML = result;
+    document.getElementById('result').innerHTML = result();
 
 }
